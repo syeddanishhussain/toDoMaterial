@@ -2,6 +2,11 @@
  * Created by dell1 on 04/01/2016.
  */
 var app = angular.module("myToDo",["ngMaterial","ngMessages","ngMdIcons"]);
+app.config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+        .primaryPalette('blue')
+
+});
 app.controller("AppController",function(){
     
 
