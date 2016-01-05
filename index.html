@@ -5,7 +5,8 @@
     <title></title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="style.css">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet"
+          type="text/css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -15,66 +16,70 @@
     <script src="bower_components/angular-material-icons/angular-material-icons.js"></script>
 
 
-
     <script src="app.js"></script>
 </head>
 <body ng-app="myToDo" ng-controller="AppController as ctrl">
-<header md-page-header  >
+<header md-page-header>
 
-    <md-toolbar >
-            <div class="md-toolbar-tools" layout="row">
-                <md-button class="md-icon-button" aria-label="Settings" flex="1">
-                    <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
-                </md-button>
-                <div flex>
-                    <h2 >
+    <md-toolbar>
+        <div class="md-toolbar-tools" layout="row">
+            <md-button class="md-icon-button" aria-label="Settings" flex="1">
+                <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+            </md-button>
+            <div flex>
+                <h2>
 
-                         <span></span>
+                    <span></span>
 
-                    </h2>
-
-                </div>
-                <div flex>
-                    <h2 >
-
-                        <span class="fontColor"><b>Material ToDo App</b></span>
-
-                    </h2>
-
-                </div>
-                <div flex="15">
-
-                </div>
-
+                </h2>
 
             </div>
-        </md-toolbar>
-    </header>
-   <md-content>
+            <div flex>
+                <h2>
+
+                    <span class="fontColor"><b>Material ToDo App</b></span>
+
+                </h2>
+
+            </div>
+            <div flex="15">
+
+            </div>
+
+
+        </div>
+    </md-toolbar>
+</header>
+<md-content>
     <div layout="row" layout-align="center start" style="padding: 16px">
-        <md-input-container class="md-block"  flex="50" >
+        <md-input-container class="md-block" flex="50">
             <label>Todo Item</label>
 
 
-            <input  flex ng-model="ctrl.todoItem">
+            <input flex ng-model="ctrl.todoItem">
 
         </md-input-container>
-        <md-button aria-label="Float Action Button" class="md-fab md-accent "  style="background-color: #FF5252;" ng-click="ctrl.addItem()"><ng-md-icon icon="add" style="fill: white" size="30" layout="column" layout-align="center center"></ng-md-icon></md-button>
+        <md-button aria-label="Float Action Button" class="md-fab" style="background-color: #FF5252;"
+                   ng-click="ctrl.addItem()">
+            <ng-md-icon icon="add" style="fill: white" size="30" layout="column"
+                        layout-align="center center"></ng-md-icon>
+        </md-button>
     </div>
     <div layout="row" layout-align="end end">
-        <div flex="35" ><p class="greyColor" >2 of 2 remaining[<a ng-click="ctrl.delete()" href="">Archive</a>]</p>
+        <div flex="35"><p class="greyColor">2 of 2 remaining[<a ng-click="ctrl.delete()" href="">Archive</a>]</p>
 
         </div>
 
     </div>
 
-   </md-content>
-<div layout="row">
+</md-content>
+<div layout="row" >
     <div flex="25">
 
     </div>
-    <div flex layout="column">
-        <md-checkbox ng-repeat="danish in ctrl.allItem" aria-label="Checkbox 1" ng-click="ctrl.selected()" ng-model="danish.check">
+    <div flex layout="column" >
+        <md-checkbox ng-repeat="danish in ctrl.allItem" aria-label="Checkbox 1" ng-click="ctrl.selected()"
+                     ng-model="danish.check" layout-wrap>
             {{danish.todo}}
         </md-checkbox>
     </div>
