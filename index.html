@@ -61,7 +61,7 @@
             <input  flex ng-model="ctrl.todoItem">
 
         </md-input-container>
-        <md-button aria-label="Float Action Button" class="md-fab md-accent "  style="background-color: #FF5252;" ng-click="ctrl.addTodo()"><ng-md-icon icon="add" style="fill: white" size="30" layout="column" layout-align="center center"></ng-md-icon></md-button>
+        <md-button aria-label="Float Action Button" class="md-fab md-accent "  style="background-color: #FF5252;" ng-click="ctrl.addItem()"><ng-md-icon icon="add" style="fill: white" size="30" layout="column" layout-align="center center"></ng-md-icon></md-button>
     </div>
     <div layout="row" layout-align="end end">
         <div flex="35" ><p class="greyColor">2 of 2 remaining[<a href="img/2.jpg">Archive</a>]</p>
@@ -76,7 +76,7 @@
 
     </div>
     <div flex layout="column">
-        <md-checkbox ng-repeat="ab in ctrl.allTodo" aria-label="Checkbox 1" ng-model="ab.check" ng-click="ctrl.selectedArchives($index)">
+        <md-checkbox ng-repeat="ab in ctrl.allItem" aria-label="Checkbox 1">
             {{ab.todo}}
         </md-checkbox>
     </div>

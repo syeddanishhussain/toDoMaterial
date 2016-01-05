@@ -3,20 +3,20 @@
  */
 var app = angular.module("myToDo",["ngMaterial","ngMessages","ngMdIcons"]);
 app.controller("AppController",function(){
-    var vm = this;
+    
 
-    vm.allTodo = [];
+    this.allItem = [];
 
 
 
     //Add todos
-    vm.addTodo = function()
+    this.addItem = function()
     {
-        vm.allTodo.push(
+        this.allItem.push(
             {
-                todo: vm.todoItem,
+                todo: this.todoItem,
                 check:false
             });
-        vm.todoItem = "";
+        this.todoItem = "";
     }
 })
