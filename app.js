@@ -14,7 +14,7 @@ app.controller("AppController",function(){
 
 
 
-    //Add todos
+
     this.addItem = function()
     {
         this.allItem.push(
@@ -25,3 +25,39 @@ app.controller("AppController",function(){
         this.todoItem = "";
     }
 })
+
+    this.delete = function()
+    {
+        for(var i = 0;i<this.allItem.length;i++)
+        {
+            if(this.allItem[i].check == true)
+        {
+                this.allItem.splice(i,1);
+                i--;
+                this.counter--;
+        }
+
+    }
+    };
+
+
+
+    this.counter = 0;
+
+
+    this.selected= function(a)
+    {
+        if(this.allItem[a].check == true)
+        {
+            this.counter--;
+        }
+            else
+        {
+            this.counter++;
+        }
+
+    }
+
+
+
+
