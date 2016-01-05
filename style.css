@@ -1,0 +1,18 @@
+.headerColor{
+    background-color: #418FF4 !important;
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.1);
+
+}
+.fontSize{
+    font-size: 30px;
+
+}
+.backColor{
+    background-color: #FF5252;
+}
+.fontColor{
+    color: white;
+}
+.greyColor{
+    color: grey;
+}
