@@ -24,20 +24,19 @@ app.controller("AppController",function(){
             });
         this.todoItem = "";
     }
-})
-
     this.delete = function()
     {
+        console.log("delete function")
         for(var i = 0;i<this.allItem.length;i++)
         {
             if(this.allItem[i].check == true)
-        {
+            {
                 this.allItem.splice(i,1);
                 i--;
                 this.counter--;
-        }
+            }
 
-    }
+        }
     };
 
 
@@ -51,12 +50,15 @@ app.controller("AppController",function(){
         {
             this.counter--;
         }
-            else
+        else
         {
             this.counter++;
         }
 
     }
+});
+
+
 
 
 

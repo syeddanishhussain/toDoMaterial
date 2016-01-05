@@ -12,7 +12,6 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js"></script>
     <script src="bower_components/angular-material-icons/angular-material-icons.js"></script>
 
 
@@ -20,9 +19,9 @@
     <script src="app.js"></script>
 </head>
 <body ng-app="myToDo" ng-controller="AppController as ctrl">
-<header md-page-header class="headerColor" >
+<header md-page-header  >
 
-    <md-toolbar class="headerColor">
+    <md-toolbar >
             <div class="md-toolbar-tools" layout="row">
                 <md-button class="md-icon-button" aria-label="Settings" flex="1">
                     <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
@@ -46,15 +45,14 @@
                 <div flex="15">
 
                 </div>
-                <md-button class="md-icon-button" aria-label="More">
 
-                </md-button>
+
             </div>
         </md-toolbar>
     </header>
    <md-content>
     <div layout="row" layout-align="center start" style="padding: 16px">
-        <md-input-container class="md-block" flex-gt-sm flex="50" >
+        <md-input-container class="md-block"  flex="50" >
             <label>Todo Item</label>
 
 
@@ -64,7 +62,7 @@
         <md-button aria-label="Float Action Button" class="md-fab md-accent "  style="background-color: #FF5252;" ng-click="ctrl.addItem()"><ng-md-icon icon="add" style="fill: white" size="30" layout="column" layout-align="center center"></ng-md-icon></md-button>
     </div>
     <div layout="row" layout-align="end end">
-        <div flex="35" ><p class="greyColor" ng-click="ctrl.delete()">2 of 2 remaining[<a>Archive</a>]</p>
+        <div flex="35" ><p class="greyColor" >2 of 2 remaining[<a ng-click="ctrl.delete()" href="">Archive</a>]</p>
 
         </div>
 
@@ -76,8 +74,8 @@
 
     </div>
     <div flex layout="column">
-        <md-checkbox ng-repeat="ab in ctrl.allItem" aria-label="Checkbox 1" ng-click="ctrl.selected">
-            {{ab.todo}}
+        <md-checkbox ng-repeat="danish in ctrl.allItem" aria-label="Checkbox 1" ng-click="ctrl.selected()" ng-model="danish.check">
+            {{danish.todo}}
         </md-checkbox>
     </div>
 </div>
